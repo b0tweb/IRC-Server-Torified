@@ -12,6 +12,15 @@ To connect to the IRC server you need to setup an IRC client, you also need to
 run a TOR proxy on the background. You need to make sure that all IRC traffic
 goes through this proxy. 
 
+#### Domain Name
+We use tor V3 domain names, we generated it with 
+![mkp224o](https://github.com/cathugger/mkp224o), which provides us a nice
+interface to generate a prefixed domain name.
+
+The reason for picking V3 is because it has better crypto, and in general
+better security. The downside is that the URL is extremely long, but because
+this is a botnet project we prefer security over usability.
+
 ----
 Date: 09-02-2020
 
