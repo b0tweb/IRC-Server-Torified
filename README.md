@@ -21,6 +21,43 @@ The reason for picking V3 is because it has better crypto, and in general
 better security. The downside is that the URL is extremely long, but because
 this is a botnet project we prefer security over usability.
 
+#### Connecting to The Server
+To connect to the server you need two things
+
+- An IRC client
+- Tor Installed
+
+In this part we only focus on HexChat, this is because it is easily configured.
+Therefore, make sure you have both `tor` and `hexchat` installed on your system.
+
+First we need to configure the tor to allow us to connect via a SocksPort,
+open the config located at `/etc/tor/torrc`. Uncomment the following line
+```
+#SocksPort 9050 # Default: Bind to localhost:9050 for local connections.
+```
+
+Now restart tor with `systemctl restart tor`.
+
+---
+
+Next we will configure hexchat.
+
+Create a new network by adding `new`, fill out the following settings,
+make sure to fill out the right domain name where `yourdomainname.onion` 
+is stated.
+
+![](https://git.xoryo.nl/tu-e/2ic80/project/irc-server/raw/master/images/Screenshot_from_2020-02-09_15-59-19.png)
+
+Then press `close` and connect. The connection will still not be able to be 
+established but we can then easily configure the tor proxy.
+
+Next click on `Settings -> Preferences` in the menu bar at the top. 
+Under the `Network` tab click on `Network setup`. Fill out the following
+information under the `Proxy Server` section.
+
+![](https://git.xoryo.nl/tu-e/2ic80/project/irc-server/raw/master/images/Screenshot_from_2020-02-09_16-03-35.png)
+
+Then simply reconnect to the network and everything should be connect normally.
 ----
 Date: 09-02-2020
 
