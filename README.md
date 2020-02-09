@@ -58,6 +58,7 @@ information under the `Proxy Server` section.
 ![](https://git.xoryo.nl/tu-e/2ic80/project/irc-server/raw/master/images/Screenshot_from_2020-02-09_16-03-35.png)
 
 Then simply reconnect to the network and everything should be connect normally.
+
 ----
 Date: 09-02-2020
 
