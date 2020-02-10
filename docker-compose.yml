@@ -1,0 +1,7 @@
+irc:
+  image: 'x0rz3q/inspircd:latest'
+  restart: always
+  container_name: inspircd_tor
+  volumes:
+    - '/srv/inspircd/irc:/etc/inspircd'
+    - '/srv/inspircd/tor:/var/lib/tor'
