@@ -3,5 +3,6 @@ irc:
   restart: always
   container_name: inspircd_tor
   volumes:
-    - '/srv/inspircd/irc:/etc/inspircd'
-    - '/srv/inspircd/tor:/var/lib/tor'
+    - '/home/x0rz3q/irc-server/irc:/etc/inspircd'
+    - '/home/x0rz3q/irc-server/tor/lib:/var/lib/tor'
+    - '/home/x0rz3q/irc-server/tor/etc:/etc/tor'
