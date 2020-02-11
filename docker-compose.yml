@@ -1,8 +1,0 @@
-irc:
-  image: 'x0rz3q/inspircd:latest'
-  restart: always
-  container_name: inspircd_tor
-  volumes:
-    - '/home/x0rz3q/irc-server/irc:/etc/inspircd'
-    - '/home/x0rz3q/irc-server/tor/lib:/var/lib/tor'
-    - '/home/x0rz3q/irc-server/tor/etc:/etc/tor'
