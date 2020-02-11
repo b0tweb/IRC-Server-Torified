@@ -21,6 +21,35 @@ The reason for picking V3 is because it has better crypto, and in general
 better security. The downside is that the URL is extremely long, but because
 this is a botnet project we prefer security over usability.
 
+#### Running IRC server
+There is a docker container available that handles most of the setup for this
+particular setup. The only thing you still need to do is edit the torrc and include
+your keys inside the right directory.
+
+To build the docker container you can simply run `docker build -t "{name}" .`
+from the project root.
+
+##### Setup
+We recommend setting this up via a docker-compose file. The docker compose file
+is defined as follows
+
+```
+irc:
+  image: 'x0rz3q/inspircd:latest'
+  restart: always
+  container_name: inspircd_tor
+  volumes:
+    - '/srv/inspircd-tor/inspircd:/etc/inspircd'
+    - '/srv/inspircd-tor/tor-lib:/var/lib/tor'
+    - '/srv/inspircd-tor/tor-etc:/etc/tor'
+```
+
+After the tor container is running, do the following.
+Setup the right hidden service port forwarding and directory inside 
+`/srv/inspircd-tor/tor-etc/torrc`, after that simply reboot the server and it should
+work. If you want a custom domain name then you need to place your keys inside
+`/srv/inspircd-tor/tor-lib`.
+
 #### Connecting to The Server
 To connect to the server you need two things
 
